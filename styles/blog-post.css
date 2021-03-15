@@ -1,0 +1,107 @@
+@import "navbar.css";
+
+body {
+    background-color: rgb(100, 100, 90);
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 450px 100px;
+    grid-template-areas:
+        "hd hd hd hd hd hd hd hd"
+        "main main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+}
+.box {
+    background: rgb(100, 100, 90);
+    text-align: center;
+}
+
+p {
+    font-family: Oswald;
+    font-size: 40px;
+    text-align: center;
+    color: cornsilk;
+}
+h2 {
+    color: darkkhaki;
+    text-align: center;
+    margin-top: 2em;
+}
+h3 {
+    text-align: center;
+}
+#nestedGrid {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-grow: 1;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.photoBox {
+    width: 250px;
+    height: 150px;
+    background: rgb(100, 100, 90);
+    align-items: center;
+}
+#one {
+    background-image: url("img1 (1).jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#two {
+    background-image: url("img1 (2).jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#three {
+    background-image: url("img1 (3).jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#four {
+    background-image: url("motors.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#five {
+    width: 42px;
+    height: 42px;
+}
+.header {
+    grid-area: hd;
+}
+
+.footer {
+    grid-area: ft;
+}
+
+.content {
+    grid-area: main;
+}
+
+@media (min-width: 600px) and (max-width: 1100px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 1050px 100px;
+        grid-template-areas:
+            "hd hd hd hd hd hd hd hd"
+            "main main main main main main main main"
+            "ft ft ft ft ft ft ft ft";
+    }
+}
+
+@media (min-width: 1101px) {
+    .container {
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 450px 100px;
+        grid-template-areas:
+            "hd hd hd hd hd hd hd hd"
+            "main main main main main main main main"
+            "ft ft ft ft ft ft ft ft";
+    }
+}
